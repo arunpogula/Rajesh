@@ -13,6 +13,7 @@ class Student(models.Model):
     sname = models.CharField(max_length=100)
     sid = models.IntegerField(unique=True)
     sloc = models.CharField(max_length=100)
+    branch = models.CharField(max_length=100)
     school = models.ForeignKey(School, on_delete= models.CASCADE)
 
     def __str__(self):
